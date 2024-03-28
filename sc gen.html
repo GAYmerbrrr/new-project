@@ -1,0 +1,37 @@
+<input type="text" id="searchBox" placeholder="Ketikkan kata kunci...">
+<button onclick="search()">Cari</button>
+
+
+function search() {
+    var keyword = document.getElementById("searchBox").value.toLowerCase(); // Ambil nilai dari kotak pencarian dan konversi menjadi huruf kecil
+    var content = document.getElementById("content").innerHTML.toLowerCase(); // Ambil konten yang ingin dicari
+
+    if (content.includes(keyword)) { // Periksa apakah konten mengandung kata kunci
+        // Redirect ke halaman baru dengan hasil pencarian
+        window.location.href = "hasil_pencarian.html?keyword=" + keyword;
+    } else {
+        alert("Konten tidak ditemukan."); // Tampilkan pesan jika konten tidak ditemukan
+    }
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Pencarian</title>
+</head>
+<body>
+    <div id="searchResult"></div>
+
+    <script>
+        // Ambil nilai parameter dari URL
+        var params = new URLSearchParams(window.location.search);
+        var keyword = params.get('keyword');
+
+        // Tampilkan hasil pencarian
+        document.getElementById("searchResult").innerHTML = "Hasil pencarian untuk: " + keyword;
+    </script>
+</body>
+</html>

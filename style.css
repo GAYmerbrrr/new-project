@@ -1,0 +1,469 @@
+body{
+    margin: 0;
+}
+
+.help a{
+    color: white;
+    text-decoration: none;
+}
+
+.help {
+    background-color: rgb(108, 36, 251);
+    width: 90px;
+    height: 60px;
+    color: white;
+    border-radius: 15px;
+    padding: 0px 15px;
+    position: fixed;
+    right: 0;
+    bottom: 40px;
+}
+
+.help span{
+    border: 2px solid;
+    border-radius: 50%;
+}
+
+/* search bar */
+.inp{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 67px;
+    z-index: 10;
+    display: grid;
+    overflow-y: hidden;
+}
+
+.inp input{
+    justify-content: center;
+    top: 15px;
+    bottom: 15px;
+    left: 60px;
+    right: 150px;
+    position: absolute;
+}
+
+.inp p{
+    font-size: larger;
+    margin-top: 17px;
+    cursor: pointer;
+    right: 80px;
+    border-radius: 6px;
+    padding: 6px 10px;
+    position: absolute;
+    background-color: black;
+    color: white;
+}
+
+.inp p:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+.inp h2{
+    font-family: monospace;
+    font-size: 40px;
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+    width: fit-content;
+    margin-top: 5px;
+    cursor: pointer;
+}
+/* search bar end */
+
+
+/* navbar */
+nav{
+    background-color: black;
+    height: 67px;
+}
+
+nav svg{
+    height: 30px;
+    position:absolute;
+    margin-left: 100px;
+    border-right: 2px white solid;
+    padding-right: 20px;
+    margin-top: 15px;
+}
+
+.a-nav{
+    margin-left: 240px;
+}
+
+.a-nav h2{
+    line-height: 24px;
+    margin-left: 20px;
+    color: white;
+    display: inline-block;
+    position: absolute;
+}
+
+.rs{
+    float: right;
+}
+
+.rs .menu-toggle{
+    color: white;
+    font-size: 40px;
+    margin-right: 100px;
+    cursor: pointer;
+}
+
+.src{
+    position: absolute;
+    font-size: xx-large;
+    right: 150px;
+    top: 7px;
+    color: aliceblue;
+    cursor: pointer;
+}
+/* navbar end */
+
+
+/* menu */
+.nav-menu{
+    margin-top: 2px;
+    background-color: black;
+    align-items: center;
+    overflow-x: hidden;
+    position: absolute;
+    top: 55px;
+    right: 0;
+    left: 0;
+}
+
+hr{
+    width: 330px;
+}
+
+.nav-menu a{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-menu a:hover{
+    color: black;
+    background-color: white;
+}
+/* menu end */
+
+
+/* header */
+header{
+    margin-top: -23px;
+    background-color: rgb(242, 204, 242);
+    width: 100%;
+    height: 400px;
+    display: grid;
+    place-items: center;
+}
+
+header h1{
+    font-family: monospace;
+    font-size: 6em;
+    margin-top: -20px;
+    margin-bottom: -120px;
+}
+
+.cari{
+    background-color: white;
+    display: flex;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+header input{
+    margin: 10px;
+    margin-left: 30px;
+    margin-right: 15px;
+    width: 900px;
+    border: none;
+}
+
+header input:focus{
+    outline: none;
+}
+
+header p{
+    margin-right: 20px;
+}
+/* header end */
+
+
+/* body */
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 60px;
+    column-gap: 10px;
+    padding: 80px;
+    justify-content: center;
+}
+
+.container a{
+    text-decoration: none;
+}
+
+
+.ua {
+    width: 40%;
+}
+
+.ua > img{
+    width: 40px;
+    height: 40px; 
+}
+/* body end */
+
+
+/* footer */
+.footer{
+    background-color: black;
+    padding: 20px 40px;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    font-family: monospace;
+    height: 650px;
+}
+
+.content-footer{
+    
+    width: 10%;
+}
+
+.content-footer li{
+    list-style: none;
+}
+
+.content-footer li a{
+    color: white;
+    text-decoration: none;
+}
+
+#company-id > div{
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    column-gap: 80px;
+}
+
+.cprght{
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+.cu h2{
+    margin-bottom: -7px;
+}
+/* footer end */
+
+/* CSS for responsiveness */
+@media only screen and (max-width: 768px) {
+    /* Adjustments for smaller screens */
+    .help{
+        width: 80px;
+        height: max-content;
+        bottom: 10px;
+        padding: 0px 15px;
+    }
+
+    .help a{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    nav svg{
+        margin-top: 10px;
+        margin-left: 0;
+        padding-right: 5px;
+        height: 20px;
+    }
+
+    
+    .a-nav h2{
+        margin-left: -146px;
+        margin-top: 8px;
+        font-size: 1em;
+    }
+
+    .rs .menu-toggle{
+        margin-top: 6px;
+        font-size: 20px;
+        margin-right: 10px;
+    }
+
+    .src{
+        font-size: 1.3em;
+        right: 40px;
+        top: 5px;
+
+    }
+
+    .container {
+        padding: 30px;
+        display: flex;
+        flex-direction: row;
+        row-gap: 60px;
+        column-gap: 10px;
+    }
+
+    .ua {
+        width: 40%;
+    }
+
+    .header h1 {
+        font-size: 2em;
+        font-size: 1px;
+    }
+
+    .cari {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .cari input {
+        width: calc(100% - 60px);
+    }
+
+    .nav-menu {
+        top: 43px;
+    }
+
+    .footer{
+        padding: 20px 40px;
+        color: white;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px 230px;
+    }
+
+    .footer .content-footer {
+        width: 24%;
+        height: fit-content;
+    }
+
+    .cprght{
+        margin-left: 60px;
+    }
+
+    .cprght svg{
+        margin-top: 35px;
+        height: 50px;
+    }
+    
+    #company-id > div{
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        column-gap: 80px;
+    }
+}
+
+
+
+
+
+@media only screen and (max-width: 468px) {
+    /* Further adjustments for even smaller screens */
+    .help{
+        width: 80px;
+        height: max-content;
+        bottom: 10px;
+        padding: 0px 15px;
+    }
+
+    .help a{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    nav svg{
+        margin-top: 10px;
+        margin-left: 0;
+        padding-right: 5px;
+        height: 20px;
+    }
+
+    
+    .a-nav h2{
+        margin-left: -146px;
+        margin-top: 8px;
+        font-size: 1em;
+    }
+
+    .rs .menu-toggle{
+        margin-top: 6px;
+        font-size: 20px;
+        margin-right: 10px;
+    }
+
+    .src{
+        font-size: 1.3em;
+        right: 40px;
+        top: 5px;
+
+    }
+
+    .container {
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ua {
+        width: 70%;
+    }
+
+    .header h1 {
+        font-size: 2em;
+        font-size: 1px;
+    }
+
+    .cari {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .cari input {
+        width: calc(100% - 60px);
+    }
+
+    .nav-menu {
+        top: 43px;
+    }
+
+    .footer{
+        padding: 20px 40px;
+        color: white;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px 70px;
+    }
+
+    .footer .content-footer {
+        width: 24%;
+        height: fit-content;
+    }
+
+    .cprght svg{
+        margin-top: 35px;
+        height: 50px;
+    }
+    
+    #company-id > div{
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        column-gap: 80px;
+    }
+}
